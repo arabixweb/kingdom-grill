@@ -1300,8 +1300,16 @@ body[dir="rtl"] .footer-content { direction: rtl; }
 }
 
 .arabix-logo {
-  height: 22px;
+  height: 18px;
   width: auto;
+}
+
+.arabix-credit {
+  padding: 6px 14px;
+}
+
+.arabix-credit span {
+  font-size: 10px;
 }
 
 .arabix-credit span {
