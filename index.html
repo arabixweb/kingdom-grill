@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مشاوي المملكة | Kingdom Grill</title>
+  <title>مشاوي المملكة | Kingdom Grill — Home</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,38 +11,11 @@
 </head>
 <body>
 
-  <!-- Language Toggle -->
-  <div class="lang-toggle" id="langToggle">
-    <button class="lang-btn active" data-lang="en">English</button>
-    <button class="lang-btn" data-lang="ar">العربية</button>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <span class="logo-icon">👑</span>
-        <span class="logo-text" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
-      </div>
-      <div class="nav-toggle" id="navToggle">
-        <span></span><span></span><span></span>
-      </div>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
-        <li><a href="#about" data-en="About" data-ar="عن المطعم">About</a></li>
-        <li><a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
-        <li><a href="#chef" data-en="Chef" data-ar="الشيف">Chef</a></li>
-        <li><a href="#reservation" data-en="Reservation" data-ar="الحجز">Reservation</a></li>
-        <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="header-placeholder"></div>
 
   <!-- Hero Section with 3D -->
   <section class="hero" id="hero">
-    <!-- Three.js container -->
     <div id="three-container"></div>
-    
     <div class="hero-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
     
@@ -53,8 +26,8 @@
         Experience the finest Arabian cuisine in the heart of Saudi Arabia
       </p>
       <div class="hero-actions">
-        <a href="#menu" class="btn-primary" data-en="Explore Menu" data-ar="استعرض القائمة">Explore Menu</a>
-        <a href="#reservation" class="btn-secondary" data-en="Book a Table" data-ar="احجز طاولة">Book a Table</a>
+        <a href="pages/menu.html" class="btn-primary" data-en="Explore Menu" data-ar="استعرض القائمة">Explore Menu</a>
+        <a href="pages/reservation.html" class="btn-secondary" data-en="Book a Table" data-ar="احجز طاولة">Book a Table</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -108,157 +81,15 @@
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section class="menu section" id="menu">
-    <div class="section-header">
-      <span class="section-tag" data-en="Our Offerings" data-ar="ما نقدمه">Our Offerings</span>
-      <h2 class="section-title" data-en="Royal" data-ar="الملكية">Royal</h2>
-      <h2 class="section-title accent" data-en="Signature Dishes" data-ar="الأطباق المميزة">Signature Dishes</h2>
-    </div>
-
-    <div class="menu-categories">
-      <button class="menu-cat active" data-cat="all" data-en="All" data-ar="الكل">All</button>
-      <button class="menu-cat" data-cat="appetizers" data-en="Appetizers" data-ar="مقبلات">Appetizers</button>
-      <button class="menu-cat" data-cat="mains" data-en="Main Course" data-ar="الأطباق الرئيسية">Main Course</button>
-      <button class="menu-cat" data-cat="desserts" data-en="Desserts" data-ar="الحلويات">Desserts</button>
-      <button class="menu-cat" data-cat="beverages" data-en="Beverages" data-ar="المشروبات">Beverages</button>
-    </div>
-
-    <div class="menu-grid">
-      <!-- Menu items will be loaded by JS -->
-    </div>
-  </section>
-
-  <!-- Chef Section -->
-  <section class="chef section" id="chef">
-    <div class="chef-container">
-      <div class="chef-card">
-        <div class="chef-image">
-          <div class="chef-frame">
-            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500" alt="Chef">
-          </div>
-          <div class="chef-experience">
-            <span class="exp-number">25+</span>
-            <span data-en="Years" data-ar="عامًا">Years</span>
-          </div>
-        </div>
-        <div class="chef-info">
-          <div class="chef-tagline" data-en="✧ Master of Culinary Arts ✧" data-ar="✧ فنان الطهي ✧">✧ Master of Culinary Arts ✧</div>
-          <h2 class="chef-name">Chef Ahmed Al-Saud</h2>
-          <p class="chef-desc" data-en="With over 25 years of culinary mastery, Chef Ahmed brings the authentic flavors of Saudi Arabia to life. Trained in Paris and inspired by Arabian heritage, each dish tells a story of passion and tradition.">
-            With over 25 years of culinary mastery, Chef Ahmed brings the authentic flavors of Saudi Arabia to life. Trained in Paris and inspired by Arabian heritage, each dish tells a story of passion and tradition.
-          </p>
-          <div class="chef-achievements">
-            <div class="achievement">
-              <i class="fas fa-star"></i>
-              <span data-en="2 Michelin Stars" data-ar="نجمتا ميشلان">2 Michelin Stars</span>
-            </div>
-            <div class="achievement">
-              <i class="fas fa-award"></i>
-              <span data-en="Best Saudi Chef 2024" data-ar="أفضل شيف سعودي 2024">Best Saudi Chef 2024</span>
-            </div>
-            <div class="achievement">
-              <i class="fas fa-book"></i>
-              <span data-en="3 Published Cookbooks" data-ar="3 كتب طبخ منشورة">3 Published Cookbooks</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reservation Section -->
-  <section class="reservation section" id="reservation">
-    <div class="section-header">
-      <span class="section-tag" data-en="Book Experience" data-ar="احجز تجربتك">Book Experience</span>
-      <h2 class="section-title" data-en="Reserve Your" data-ar="احجز">Reserve Your</h2>
-      <h2 class="section-title accent" data-en="Royal Table" data-ar="طاولتك الملكية">Royal Table</h2>
-    </div>
-
-    <div class="reservation-container">
-      <div class="reservation-info">
-        <div class="info-card">
-          <i class="fas fa-clock"></i>
-          <h3 data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</h3>
-          <p data-en="Daily: 12:00 PM - 1:00 AM" data-ar="يوميًا: 12:00 م - 1:00 ص">Daily: 12:00 PM - 1:00 AM</p>
-          <p data-en="Friday Brunch: 11:00 AM - 3:00 PM" data-ar="جمعة: 11:00 ص - 3:00 م">Friday Brunch: 11:00 AM - 3:00 PM</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3 data-en="Location" data-ar="الموقع">Location</h3>
-          <p data-en="King Fahd Road, Riyadh, Saudi Arabia" data-ar="طريق الملك فهد، الرياض، المملكة العربية السعودية">King Fahd Road, Riyadh, Saudi Arabia</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-phone-alt"></i>
-          <h3 data-en="Contact" data-ar="الاتصال">Contact</h3>
-          <p>+966 55 123 4567</p>
-          <p>info@kingdomgrill.sa</p>
-        </div>
-      </div>
-
-      <form class="reservation-form" id="reservationForm">
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="resName" placeholder=" " required>
-            <label for="resName" data-en="Your Name" data-ar="الاسم">Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="tel" id="resPhone" placeholder=" " required>
-            <label for="resPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="date" id="resDate" required>
-            <label for="resDate" class="float-label" data-en="Date" data-ar="التاريخ">Date</label>
-          </div>
-          <div class="form-group">
-            <input type="time" id="resTime" required>
-            <label for="resTime" class="float-label" data-en="Time" data-ar="الوقت">Time</label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <select id="resGuests" required>
-              <option value="">2 Guests</option>
-              <option value="1">1 Guest</option>
-              <option value="2" selected>2 Guests</option>
-              <option value="3">3 Guests</option>
-              <option value="4">4 Guests</option>
-              <option value="5">5 Guests</option>
-              <option value="6">6+ Guests</option>
-            </select>
-            <label for="resGuests" class="float-label" data-en="Number of Guests" data-ar="عدد الضيوف">Number of Guests</label>
-          </div>
-          <div class="form-group">
-            <select id="resOccasion">
-              <option value="" data-en="Select Occasion" data-ar="اختر المناسبة">Select Occasion</option>
-              <option value="dinner" data-en="Royal Dinner" data-ar="عشاء ملكي">Royal Dinner</option>
-              <option value="celebration" data-en="Celebration" data-ar="احتفال">Celebration</option>
-              <option value="business" data-en="Business Meeting" data-ar="اجتماع عمل">Business Meeting</option>
-              <option value="private" data-en="Private Event" data-ar="مناسبة خاصة">Private Event</option>
-            </select>
-            <label for="resOccasion" class="float-label" data-en="Occasion" data-ar="المناسبة">Occasion</label>
-          </div>
-        </div>
-        <div class="form-group full">
-          <textarea id="resMessage" rows="3" placeholder=" "></textarea>
-          <label for="resMessage" data-en="Special Requests (Optional)" data-ar="طلبات خاصة (اختياري)">Special Requests (Optional)</label>
-        </div>
-        <button type="submit" class="btn-primary submit-btn" data-en="Confirm Reservation" data-ar="تأكيد الحجز">Confirm Reservation</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Testimonials / Reviews -->
+  <!-- Testimonials -->
   <section class="testimonials section" id="testimonials">
     <div class="section-header">
       <span class="section-tag" data-en="Guest Reviews" data-ar="آراء الضيوف">Guest Reviews</span>
       <h2 class="section-title" data-en="What Our" data-ar="ماذا">What Our</h2>
       <h2 class="section-title accent" data-en="Guests Say" data-ar="يقول ضيوفنا">Guests Say</h2>
     </div>
-    <div class="testimonials-slider" id="testimonialsSlider">
-      <div class="testimonial-card">
+    <div class="testimonials-slider">
+      <div class="testimonial-card reveal">
         <div class="stars">★★★★★</div>
         <p data-en=""An extraordinary culinary journey! The lamb kabsa was divine, and the ambiance transported us to another era."">
           "An extraordinary culinary journey! The lamb kabsa was divine, and the ambiance transported us to another era."
@@ -268,7 +99,7 @@
           <span data-en="Riyadh" data-ar="الرياض">Riyadh</span>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal">
         <div class="stars">★★★★★</div>
         <p data-en=""The perfect blend of tradition and modern luxury. Every dish is a masterpiece. Highly recommended!"">
           "The perfect blend of tradition and modern luxury. Every dish is a masterpiece. Highly recommended!"
@@ -278,7 +109,7 @@
           <span data-en="Jeddah" data-ar="جدة">Jeddah</span>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal">
         <div class="stars">★★★★★</div>
         <p data-en=""Best dining experience in Riyadh! The service is impeccable and the flavors are unforgettable."">
           "Best dining experience in Riyadh! The service is impeccable and the flavors are unforgettable."
@@ -291,81 +122,16 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact section" id="contact">
-    <div class="section-header">
-      <span class="section-tag" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</span>
-      <h2 class="section-title" data-en="We'd Love to" data-ar="يسعدنا">We'd Love to</h2>
-      <h2 class="section-title accent" data-en="Hear From You" data-ar="سماع منك">Hear From You</h2>
-    </div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-map-pin"></i>
-          <div>
-            <h4 data-en="Address" data-ar="العنوان">Address</h4>
-            <p>King Fahd Road, Riyadh, Saudi Arabia</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
-            <p>+966 55 123 4567</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
-            <p>info@kingdomgrill.sa</p>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <span class="logo-text" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
-        <p data-en="Royalty on a plate. Since 2024." data-ar="الملكية في طبق. منذ 2024.">Royalty on a plate. Since 2024.</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-          <a href="#about" data-en="About" data-ar="عن المطعم">About</a>
-          <a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a>
-          <a href="#reservation" data-en="Reservation" data-ar="الحجز">Reservation</a>
-        </div>
-        <div class="footer-col">
-          <h4 data-en="Hours" data-ar="ساعات العمل">Hours</h4>
-          <p data-en="Daily: 12PM - 1AM" data-ar="يوميًا: 12م - 1ص">Daily: 12PM - 1AM</p>
-          <p data-en="Fri Brunch: 11AM - 3PM" data-ar="الجمعة: 11ص - 3م">Fri Brunch: 11AM - 3PM</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Kingdom Grill. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
-      <p data-en="Made with ♥ in Saudi Arabia" data-ar="صنع بـ ♥ في المملكة العربية السعودية">Made with ♥ in Saudi Arabia</p>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top -->
-  <button class="scroll-top" id="scrollTop">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <div id="footer-placeholder"></div>
 
   <!-- Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/three-hero.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSharedComponents('home');
+    });
+  </script>
 </body>
 </html>

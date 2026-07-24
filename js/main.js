@@ -124,17 +124,9 @@ const menuData = {
 // ============================================================
 // DOM ELEMENTS
 // ============================================================
-const langToggle = document.getElementById('langToggle');
-const langBtns = document.querySelectorAll('.lang-btn');
-const navMenu = document.getElementById('navMenu');
-const navToggle = document.getElementById('navToggle');
-const navbar = document.getElementById('navbar');
-const scrollTopBtn = document.getElementById('scrollTop');
 const menuGrid = document.querySelector('.menu-grid');
-const menuCats = document.querySelectorAll('.menu-cat');
 const heroParticles = document.getElementById('heroParticles');
 const stats = document.querySelectorAll('.stat-num');
-const reservationForm = document.getElementById('reservationForm');
 
 let currentLang = 'en';
 let currentCategory = 'all';
@@ -160,85 +152,6 @@ createParticles();
 
 // ============================================================
 // LANGUAGE SWITCHER
-// ============================================================
-function switchLanguage(lang) {
-  currentLang = lang;
-
-  // Update active button
-  langBtns.forEach(btn => btn.classList.remove('active'));
-  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
-
-  // Set direction
-  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  document.documentElement.lang = lang;
-
-  // Update all translatable elements
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const key = lang === 'en' ? 'data-en' : 'data-ar';
-    const text = el.getAttribute(key);
-    if (text) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = text;
-      } else if (el.tagName === 'OPTION') {
-        el.textContent = text;
-      } else {
-        el.textContent = text;
-      }
-    }
-  });
-
-  // Refresh menu for current language
-  renderMenu(currentCategory);
-}
-
-langBtns.forEach(btn => {
-  btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
-});
-
-// ============================================================
-// NAVBAR
-// ============================================================
-navToggle.addEventListener('click', () => {
-  navToggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    navToggle.classList.remove('active');
-    navMenu.classList.remove('active');
-  });
-});
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.pageYOffset;
-  navbar.classList.toggle('scrolled', scrollY > 80);
-  scrollTopBtn.classList.toggle('visible', scrollY > 500);
-});
-
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  const scrollY = window.pageYOffset;
-  sections.forEach(section => {
-    const top = section.offsetTop - 150;
-    const bottom = top + section.offsetHeight;
-    const id = section.getAttribute('id');
-    if (scrollY >= top && scrollY < bottom) {
-      document.querySelectorAll('.nav-menu a').forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
-      });
-    }
-  });
-});
-
-// ============================================================
-// SCROLL TO TOP
-// ============================================================
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
 // ============================================================
 // MENU RENDERER
 // ============================================================
@@ -273,9 +186,9 @@ function renderMenu(category) {
 }
 
 // Menu category filters
-menuCats.forEach(cat => {
+document.querySelectorAll('.menu-cat').forEach(cat => {
   cat.addEventListener('click', () => {
-    menuCats.forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.menu-cat').forEach(c => c.classList.remove('active'));
     cat.classList.add('active');
     currentCategory = cat.dataset.cat;
     renderMenu(currentCategory);
@@ -283,7 +196,9 @@ menuCats.forEach(cat => {
 });
 
 // Initial render
-renderMenu('all');
+if (document.querySelector('.menu-grid')) {
+  renderMenu('all');
+}
 
 // ============================================================
 // SCROLL REVEAL ANIMATIONS
@@ -339,27 +254,6 @@ const statsObserver = new IntersectionObserver((entries) => {
 
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
-
-// ============================================================
-// RESERVATION FORM
-// ============================================================
-reservationForm?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const btn = reservationForm.querySelector('.submit-btn');
-  const originalText = btn.textContent;
-  
-  btn.textContent = currentLang === 'en' ? '✓ Reservation Sent!' : '✓ تم إرسال الحجز!';
-  btn.style.background = '#006C35';
-  btn.style.color = '#FFF';
-  
-  setTimeout(() => {
-    btn.textContent = originalText;
-    btn.style.background = '';
-    btn.style.color = '';
-    reservationForm.reset();
-  }, 3000);
-});
 
 // ============================================================
 // SMOOTH SCROLL for anchor links

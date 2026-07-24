@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القائمة | Menu — Kingdom Grill</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <span class="page-badge" data-en="✦ Our Offerings ✦" data-ar="✦ ما نقدمه ✦">✦ Our Offerings ✦</span>
+      <h1 class="page-title" data-en="Royal Signature" data-ar="الملكية">Royal Signature</h1>
+      <h1 class="page-title accent" data-en="Dishes" data-ar="الأطباق المميزة">Dishes</h1>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu section page-section">
+    <div class="menu-categories">
+      <button class="menu-cat active" data-cat="all" data-en="All" data-ar="الكل">All</button>
+      <button class="menu-cat" data-cat="appetizers" data-en="Appetizers" data-ar="مقبلات">Appetizers</button>
+      <button class="menu-cat" data-cat="mains" data-en="Main Course" data-ar="الأطباق الرئيسية">Main Course</button>
+      <button class="menu-cat" data-cat="desserts" data-en="Desserts" data-ar="الحلويات">Desserts</button>
+      <button class="menu-cat" data-cat="beverages" data-en="Beverages" data-ar="المشروبات">Beverages</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSharedComponents('menu');
+    });
+  </script>
+</body>
+</html>
