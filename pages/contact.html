@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>اتصل بنا | Contact — Kingdom Grill</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <div id="header-placeholder"></div>
 
-  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero-bg contact-bg"></div>
+    <div class="page-hero-particles"></div>
     <div class="page-hero-content">
       <span class="page-badge" data-en="✦ Get in Touch ✦" data-ar="✦ تواصل معنا ✦">✦ Get in Touch ✦</span>
       <h1 class="page-title" data-en="We'd Love to" data-ar="يسعدنا">We'd Love to</h1>
@@ -23,10 +19,9 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="page-section">
-    <div class="contact-container">
-      <div class="contact-info">
+    <div class="contact-grid">
+      <div class="contact-sidebar">
         <div class="contact-item">
           <i class="fas fa-map-pin"></i>
           <div>
@@ -53,15 +48,13 @@
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
           <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-
-      <div class="contact-map">
-        <div class="map-placeholder">
-          <i class="fas fa-map-marked-alt"></i>
-          <p data-en="King Fahd Road, Riyadh, Saudi Arabia" data-ar="طريق الملك فهد، الرياض، المملكة العربية السعودية">King Fahd Road, Riyadh, Saudi Arabia</p>
-          <span data-en="Google Map integration here" data-ar="خريطة جوجل هنا">📍 Google Map integration here</span>
-        </div>
+      <div class="map-box">
+        <i class="fas fa-map-marked-alt"></i>
+        <p data-en="King Fahd Road, Riyadh, Saudi Arabia" data-ar="طريق الملك فهد، الرياض، المملكة العربية السعودية">King Fahd Road, Riyadh, Saudi Arabia</p>
+        <span data-en="📍 Interactive Map" data-ar="📍 خريطة تفاعلية">📍 Interactive Map Coming Soon</span>
       </div>
     </div>
   </section>
@@ -69,10 +62,9 @@
   <div id="footer-placeholder"></div>
 
   <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initSharedComponents('contact');
-    });
+    document.addEventListener('DOMContentLoaded', () => initSharedComponents('contact'));
   </script>
 </body>
 </html>

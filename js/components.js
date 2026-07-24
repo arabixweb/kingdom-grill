@@ -1,42 +1,26 @@
 /**
- * Shared Components — Common Header & Footer
- * Kingdom Grill | مشاوي المملكة
+ * Shared Components — Kingdom Grill | مشاوي المملكة
+ * Premium multi-page header/footer system
  */
 
-// ============================================================
-// RENDER HEADER
-// ============================================================
 function renderHeader(currentPage = 'home') {
-  const baseUrls = {
-    home: 'index.html',
-    menu: 'menu.html',
-    chef: 'chef.html',
-    reservation: 'reservation.html',
-    contact: 'contact.html',
+  const pageData = {
+    home:     { label: { en: 'Home',     ar: 'الرئيسية' },     file: 'index.html' },
+    menu:     { label: { en: 'Menu',     ar: 'القائمة' },     file: 'menu.html' },
+    chef:     { label: { en: 'Chef',     ar: 'الشيف' },       file: 'chef.html' },
+    reservation: { label: { en: 'Reservation', ar: 'الحجز' }, file: 'reservation.html' },
+    contact:  { label: { en: 'Contact',  ar: 'اتصل بنا' },    file: 'contact.html' },
   };
 
-  const pages = [
-    { id: 'home', en: 'Home', ar: 'الرئيسية' },
-    { id: 'menu', en: 'Menu', ar: 'القائمة' },
-    { id: 'chef', en: 'Chef', ar: 'الشيف' },
-    { id: 'reservation', en: 'Reservation', ar: 'الحجز' },
-    { id: 'contact', en: 'Contact', ar: 'اتصل بنا' },
-  ];
+  const pageIds = ['home', 'menu', 'chef', 'reservation', 'contact'];
 
-  // From root (index.html) → path needs pages/ prefix
-  // From sub-page (pages/*.html) → path is just the filename (same dir)
-  const prefix = currentPage === 'home' ? 'pages/' : '';
-
-  // Home page needs: pages/menu.html, pages/chef.html etc
-  // Sub-pages (already in pages/) need: menu.html, chef.html etc
-  const getPageUrl = (pageId) => {
+  const navUrl = (id) => {
     if (currentPage === 'home') {
-      if (pageId === 'home') return 'index.html';
-      return `pages/${baseUrls[pageId]}`;
+      if (id === 'home') return 'index.html';
+      return `pages/${pageData[id].file}`;
     }
-    // Sub-pages: home goes up one level, others are same dir
-    if (pageId === 'home') return '../index.html';
-    return baseUrls[pageId];
+    if (id === 'home') return '../index.html';
+    return pageData[id].file;
   };
 
   return `
@@ -44,7 +28,6 @@ function renderHeader(currentPage = 'home') {
       <button class="lang-btn active" data-lang="en">English</button>
       <button class="lang-btn" data-lang="ar">العربية</button>
     </div>
-
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="${currentPage === 'home' ? 'index.html' : '../index.html'}" class="logo">
@@ -55,9 +38,9 @@ function renderHeader(currentPage = 'home') {
           <span></span><span></span><span></span>
         </div>
         <ul class="nav-menu" id="navMenu">
-          ${pages.map(p => `
-            <li><a href="${getPageUrl(p.id)}" class="${p.id === currentPage ? 'active' : ''}" 
-                   data-en="${p.en}" data-ar="${p.ar}">${p.en}</a></li>
+          ${pageIds.map(id => `
+            <li><a href="${navUrl(id)}" class="${id === currentPage ? 'active' : ''}"
+                   data-en="${pageData[id].label.en}" data-ar="${pageData[id].label.ar}">${pageData[id].label.en}</a></li>
           `).join('')}
         </ul>
       </div>
@@ -65,70 +48,73 @@ function renderHeader(currentPage = 'home') {
   `;
 }
 
-// ============================================================
-// RENDER FOOTER
-// ============================================================
 function renderFooter(currentPage = 'home') {
-  // For links in pages/: home needs 'pages/', sub-pages need '' (same dir)
-  const pageLinkPrefix = currentPage === 'home' ? 'pages/' : '';
-  // For assets, images: home needs './', sub-pages need '../' (go up one level)
   const prefix = currentPage === 'home' ? './' : '../';
+  const pageLinkPrefix = currentPage === 'home' ? 'pages/' : '';
 
   return `
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="logo-text footer-main-logo" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
+          <span class="logo-text" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
           <p data-en="Royalty on a plate. Since 2024." data-ar="الملكية في طبق. منذ 2024.">Royalty on a plate. Since 2024.</p>
+          <p style="margin-top:8px;font-size:0.82rem;color:var(--text-muted);opacity:0.8;"
+             data-en="King Fahd Road, Riyadh, Saudi Arabia"
+             data-ar="طريق الملك فهد، الرياض، المملكة العربية السعودية">
+            King Fahd Road, Riyadh, Saudi Arabia
+          </p>
         </div>
-        <div class="footer-links">
+        <div class="footer-links-grid">
           <div class="footer-col">
-            <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+            <h4 data-en="Explore" data-ar="تصفح">Explore</h4>
             <a href="${prefix}index.html" data-en="Home" data-ar="الرئيسية">Home</a>
             <a href="${pageLinkPrefix}menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+            <a href="${pageLinkPrefix}chef.html" data-en="Our Chef" data-ar="الشيف">Our Chef</a>
             <a href="${pageLinkPrefix}reservation.html" data-en="Reservation" data-ar="الحجز">Reservation</a>
             <a href="${pageLinkPrefix}contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
           </div>
           <div class="footer-col">
             <h4 data-en="Hours" data-ar="ساعات العمل">Hours</h4>
-            <p data-en="Daily: 12PM - 1AM" data-ar="يوميًا: 12م - 1ص">Daily: 12PM - 1AM</p>
-            <p data-en="Fri Brunch: 11AM - 3PM" data-ar="الجمعة: 11ص - 3م">Fri Brunch: 11AM - 3PM</p>
+            <p data-en="Daily: 12:00 PM – 1:00 AM" data-ar="يوميًا: 12:00 م – 1:00 ص">Daily: 12:00 PM – 1:00 AM</p>
+            <p data-en="Friday Brunch: 11:00 AM – 3:00 PM" data-ar="الجمعة: 11:00 ص – 3:00 م">Fri Brunch: 11 AM – 3 PM</p>
+            <p data-en="📍 King Fahd Road, Riyadh" data-ar="📍 طريق الملك فهد، الرياض">📍 King Fahd Road, Riyadh</p>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h4 data-en="Stay Connected" data-ar="ابق على اتصال">Stay Connected</h4>
+          <div class="newsletter-input">
+            <input type="email" placeholder="your@email.com">
+            <button data-en="Subscribe" data-ar="اشتراك">→</button>
+          </div>
+          <div class="social-links" style="margin-top:18px;justify-content:flex-start;">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2024 Kingdom Grill. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
-        <div class="footer-developed">
-          <a href="https://www.arabixweb.com" target="_blank" rel="noopener" class="arabix-credit">
-            <img src="${prefix}assets/arabix-logo.png" alt="Arabix" class="arabix-logo" />
-            <span data-en="Developed by Arabix" data-ar="تطوير عربيكس">Developed by Arabix</span>
-          </a>
-        </div>
+        <a href="https://www.arabixweb.com" target="_blank" rel="noopener" class="footer-credit">
+          <img src="${prefix}assets/arabix-logo.png" alt="Arabix" />
+          <span data-en="Developed by Arabix" data-ar="تطوير عربيكس">Developed by Arabix</span>
+        </a>
       </div>
     </footer>
-
-    <button class="scroll-top" id="scrollTop">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
   `;
 }
 
-// ============================================================
-// INIT SHARED COMPONENTS
-// ============================================================
 function initSharedComponents(currentPage) {
-  // Inject header
   document.getElementById('header-placeholder').innerHTML = renderHeader(currentPage);
-  // Inject footer
   document.getElementById('footer-placeholder').innerHTML = renderFooter(currentPage);
 
-  // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    navbar?.classList.toggle('scrolled', window.pageYOffset > 80);
+    navbar?.classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
   navToggle?.addEventListener('click', () => {
@@ -142,14 +128,12 @@ function initSharedComponents(currentPage) {
     });
   });
 
-  // Scroll to top
   const scrollTop = document.getElementById('scrollTop');
   window.addEventListener('scroll', () => {
-    scrollTop?.classList.toggle('visible', window.pageYOffset > 500);
+    scrollTop?.classList.toggle('visible', window.scrollY > 500);
   });
   scrollTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Language switcher
   const langBtns = document.querySelectorAll('.lang-btn');
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -166,11 +150,12 @@ function initSharedComponents(currentPage) {
     });
   });
 
-  // Scroll reveal
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
+    .observeAll?.() || document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 }).observe(el);
     });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }

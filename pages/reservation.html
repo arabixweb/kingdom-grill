@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الحجز | Reservation — Kingdom Grill</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <div id="header-placeholder"></div>
 
-  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero-bg reservation-bg"></div>
+    <div class="page-hero-particles"></div>
     <div class="page-hero-content">
       <span class="page-badge" data-en="✦ Book Experience ✦" data-ar="✦ احجز تجربتك ✦">✦ Book Experience ✦</span>
       <h1 class="page-title" data-en="Reserve Your" data-ar="احجز">Reserve Your</h1>
@@ -23,15 +19,14 @@
     </div>
   </section>
 
-  <!-- Reservation Section -->
-  <section class="page-section">
-    <div class="reservation-container">
+  <section class="page-section reservation-section" style="padding-top:0;">
+    <div class="reservation-content" style="margin-top:60px;">
       <div class="reservation-info">
         <div class="info-card">
           <i class="fas fa-clock"></i>
           <h3 data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</h3>
-          <p data-en="Daily: 12:00 PM - 1:00 AM" data-ar="يوميًا: 12:00 م - 1:00 ص">Daily: 12:00 PM - 1:00 AM</p>
-          <p data-en="Friday Brunch: 11:00 AM - 3:00 PM" data-ar="الجمعة: 11:00 ص - 3:00 م">Friday Brunch: 11:00 AM - 3:00 PM</p>
+          <p data-en="Daily: 12:00 PM - 1:00 AM" data-ar="يوميًا: 12:00 م - 1:00 ص">Daily: 12:00 PM – 1:00 AM</p>
+          <p data-en="Friday Brunch: 11:00 AM - 3:00 PM" data-ar="الجمعة: 11:00 ص - 3:00 م">Friday Brunch: 11:00 AM – 3:00 PM</p>
         </div>
         <div class="info-card">
           <i class="fas fa-map-marker-alt"></i>
@@ -103,16 +98,15 @@
   <div id="footer-placeholder"></div>
 
   <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initSharedComponents('reservation');
-
-      // Reservation form handler
       document.getElementById('reservationForm')?.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = e.target.querySelector('.submit-btn');
         const lang = document.querySelector('.lang-btn.active')?.dataset.lang || 'en';
-        btn.textContent = lang === 'en' ? '✓ Reservation Sent!' : '✓ تم إرسال الحجز!';
+        btn.textContent = lang === 'en' ? '✓ Reserved!' : '✓ تم الحجز!';
         btn.style.background = '#006C35';
         setTimeout(() => {
           btn.textContent = lang === 'en' ? 'Confirm Reservation' : 'تأكيد الحجز';

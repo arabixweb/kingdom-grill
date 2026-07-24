@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>القائمة | Menu — Kingdom Grill</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <div id="header-placeholder"></div>
 
-  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero-bg"></div>
+    <div class="page-hero-particles"></div>
     <div class="page-hero-content">
       <span class="page-badge" data-en="✦ Our Offerings ✦" data-ar="✦ ما نقدمه ✦">✦ Our Offerings ✦</span>
       <h1 class="page-title" data-en="Royal Signature" data-ar="الملكية">Royal Signature</h1>
@@ -23,8 +19,7 @@
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section class="menu section page-section">
+  <section class="section">
     <div class="menu-categories">
       <button class="menu-cat active" data-cat="all" data-en="All" data-ar="الكل">All</button>
       <button class="menu-cat" data-cat="appetizers" data-en="Appetizers" data-ar="مقبلات">Appetizers</button>
@@ -38,10 +33,25 @@
   <div id="footer-placeholder"></div>
 
   <script src="../js/components.js"></script>
+  <script src="../js/menu-data.js"></script>
   <script src="../js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initSharedComponents('menu');
+      renderMenuItems(menuData.appetizers.concat(menuData.mains).concat(menuData.desserts).concat(menuData.beverages));
+    });
+
+    document.querySelectorAll('.menu-cat').forEach(cat => {
+      cat.addEventListener('click', () => {
+        document.querySelectorAll('.menu-cat').forEach(c => c.classList.remove('active'));
+        cat.classList.add('active');
+        const catName = cat.dataset.cat;
+        if (catName === 'all') {
+          renderMenuItems(menuData.appetizers.concat(menuData.mains).concat(menuData.desserts).concat(menuData.beverages));
+        } else {
+          renderMenuItems(menuData[catName]);
+        }
+      });
     });
   </script>
 </body>
