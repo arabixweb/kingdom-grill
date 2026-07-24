@@ -31,8 +31,7 @@ function renderHeader(currentPage = 'home') {
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="${currentPage === 'home' ? 'index.html' : '../index.html'}" class="logo">
-          <span class="logo-icon">👑</span>
-          <span class="logo-text" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
+          <img src="${currentPage === 'home' ? 'assets/logo.svg' : '../assets/logo.svg'}" alt="Kingdom Grill" style="height:42px;">
         </a>
         <div class="nav-toggle" id="navToggle">
           <span></span><span></span><span></span>

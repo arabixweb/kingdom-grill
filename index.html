@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مشاوي المملكة | Kingdom Grill — Fine Arabian Dining</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,24 +15,33 @@
   <!-- HERO -->
   <section class="hero" id="hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
     <div id="three-container" style="position:absolute;inset:0;z-index:1;"></div>
-    <div style="position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(5,5,5,0.85) 0%,rgba(5,5,5,0.3) 40%,rgba(5,5,5,0.85) 100%);"></div>
+    <div style="position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(5,5,5,0.9) 0%,rgba(5,5,5,0.2) 40%,rgba(5,5,5,0.85) 100%);"></div>
     <div id="heroParticles" style="position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;"></div>
-    <div class="hero-content" style="position:relative;z-index:4;text-align:center;max-width:900px;padding:0 30px;">
-      <div style="display:inline-block;padding:8px 28px;border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:25px;background:rgba(201,168,76,0.04);backdrop-filter:blur(4px);border-radius:4px;animation:fadeInUp 1s ease;" data-en="✦ Since 2024 ✦" data-ar="✦ منذ 2024 ✦">✦ Since 2024 ✦</div>
-      <h1 style="font-family:var(--font-display);font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:1.05;color:var(--text);margin-bottom:20px;text-shadow:0 2px 40px rgba(0,0,0,0.5);animation:fadeInUp 1s ease 0.2s both;" data-en="A Taste of" data-ar="طعم">A Taste of</h1>
-      <h1 style="font-family:var(--font-display);font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:1.05;background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:30px;animation:fadeInUp 1s ease 0.3s both;" data-en="Royalty" data-ar="المملكة">Royalty</h1>
-      <p style="font-size:clamp(1rem,1.5vw,1.15rem);color:var(--text-muted);line-height:1.9;max-width:600px;margin:0 auto 45px;animation:fadeInUp 1s ease 0.5s both;" data-en="Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance." data-ar="استمتع بأرقى المأكولات العربية في قلب المملكة العربية السعودية — حيث يلتقي التراث العريق بالأناقة العصرية.">Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance.</p>
+    
+    <div class="hero-content" style="position:relative;z-index:4;text-align:center;max-width:920px;padding:0 30px;">
+      <div class="hero-logo">
+        <img src="assets/logo.svg" alt="Kingdom Grill" style="height:55px;margin-bottom:15px;">
+      </div>
+      <div style="display:inline-block;padding:8px 28px;border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;background:rgba(201,168,76,0.04);backdrop-filter:blur(4px);border-radius:4px;animation:fadeInUp 1s ease;" data-en="✦ Since 2024 ✦" data-ar="✦ منذ 2024 ✦">✦ Since 2024 ✦</div>
+      
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;color:var(--text);text-shadow:0 2px 40px rgba(0,0,0,0.5);animation:fadeInUp 1s ease 0.2s both;" data-en="A Taste of" data-ar="طعم">A Taste of</h1>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:25px;animation:fadeInUp 1s ease 0.3s both;" data-en="Royalty" data-ar="المملكة">Royalty</h1>
+      
+      <p style="font-size:clamp(0.95rem,1.3vw,1.1rem);color:var(--text-muted);line-height:1.9;max-width:580px;margin:0 auto 40px;animation:fadeInUp 1s ease 0.5s both;" data-en="Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance." data-ar="استمتع بأرقى المأكولات العربية في قلب المملكة العربية السعودية — حيث يلتقي التراث العريق بالأناقة العصرية.">Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance.</p>
+      
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 1s ease 0.7s both;">
         <a href="pages/menu.html" class="btn-primary" data-en="Explore Menu" data-ar="استعرض القائمة">Explore Menu</a>
         <a href="pages/reservation.html" class="btn-secondary" data-en="Book a Table" data-ar="احجز طاولة">Book a Table</a>
       </div>
-      <div style="display:flex;gap:60px;justify-content:center;margin-top:60px;animation:fadeInUp 1s ease 0.9s both;">
+      
+      <div style="display:flex;gap:50px;justify-content:center;margin-top:55px;animation:fadeInUp 1s ease 0.9s both;">
         <div style="text-align:center;"><span class="stat-num" data-count="50" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Dishes" data-ar="طبق">Dishes</span></div>
-        <div style="text-align:center;"><span class="stat-num" data-count="15" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Years Heritage" data-ar="عام من التراث">Years Heritage</span></div>
+        <div style="text-align:center;"><span class="stat-num" data-count="15" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Years Heritage" data-ar="عام">Years Heritage</span></div>
         <div style="text-align:center;"><span class="stat-num" data-count="10000" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Happy Guests" data-ar="ضيف سعيد">Happy Guests</span></div>
       </div>
     </div>
-    <div style="position:absolute;bottom:35px;left:50%;transform:translateX(-50%);z-index:4;text-align:center;animation:fadeInUp 1s ease 1.1s both;">
+    
+    <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:4;text-align:center;animation:fadeInUp 1s ease 1.1s both;">
       <span style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:3px;color:var(--text-muted);margin-bottom:8px;" data-en="Scroll Down" data-ar="اسحب للأسفل">Scroll Down</span>
       <div style="width:22px;height:34px;border:2px solid var(--text-muted);border-radius:12px;margin:0 auto;position:relative;">
         <div style="width:3px;height:7px;background:var(--gold);border-radius:2px;position:absolute;top:6px;left:50%;transform:translateX(-50%);animation:scrollDot 2s ease-in-out infinite;"></div>
@@ -51,8 +61,8 @@
     </div>
     <div class="about-content">
       <div class="about-text">
-        <p data-en="Welcome to Kingdom Grill, where the rich tapestry of Saudi Arabian flavors is woven into every dish. Our chefs blend centuries-old recipes with contemporary techniques, creating an unforgettable dining experience that honors our heritage while embracing innovation.">Welcome to Kingdom Grill, where the rich tapestry of Saudi Arabian flavors is woven into every dish.</p>
-        <p data-en="Located in the heart of Riyadh, our restaurant offers a majestic ambiance with stunning views of the city skyline. Every detail, from the handcrafted decor to the exquisite presentation, reflects our commitment to excellence.">Located in the heart of Riyadh, our restaurant offers a majestic ambiance with stunning views of the city skyline.</p>
+        <p data-en="Welcome to Kingdom Grill, where the rich tapestry of Saudi Arabian flavors is woven into every dish. Our chefs blend centuries-old recipes with contemporary techniques, creating an unforgettable dining experience that honors our heritage while embracing innovation.">Welcome to Kingdom Grill — where the rich tapestry of Saudi Arabian flavors is woven into every dish. Our chefs blend centuries-old recipes with contemporary techniques.</p>
+        <p data-en="Located in the heart of Riyadh, our restaurant offers a majestic ambiance with stunning views of the city skyline. Every detail, from the handcrafted decor to the exquisite presentation, reflects our commitment to excellence.">Located in the heart of Riyadh, every detail reflects our commitment to excellence — from the handcrafted decor to the exquisite presentation.</p>
         <div class="about-signature">— Chef Ahmed Al-Saud</div>
         <a href="pages/chef.html" class="btn-secondary" style="margin-top:20px;" data-en="Meet Our Chef" data-ar="تعرف على شيفنا">Meet Our Chef</a>
       </div>
@@ -68,16 +78,16 @@
   </section>
 
   <!-- MENU PREVIEW -->
-  <section class="section" id="menu">
+  <section class="section" id="homeMenuSection">
     <div class="section-header">
       <span class="section-tag" data-en="Our Offerings" data-ar="ما نقدمه">Our Offerings</span>
       <h2 class="section-title" data-en="Royal" data-ar="الملكية">Royal</h2>
       <h2 class="section-title accent" data-en="Signature Dishes" data-ar="الأطباق المميزة">Signature Dishes</h2>
       <p class="section-subtitle" data-en="Crafted with passion, served with pride" data-ar="معد بشغف، يقدم بفخر">Crafted with passion, served with pride</p>
     </div>
-    <div class="menu-grid" id="homeMenuGrid"></div>
+    <div class="menu-grid menu-grid-home" id="homeMenuGrid"></div>
     <div style="text-align:center;margin-top:50px;">
-      <a href="pages/menu.html" class="btn-primary" data-en="View Full Menu" data-ar="عرض القائمة كاملة">View Full Menu</a>
+      <a href="pages/menu.html" class="btn-primary" data-en="View Full Menu →" data-ar="عرض القائمة كاملة ←">View Full Menu →</a>
     </div>
   </section>
 
@@ -85,7 +95,8 @@
   <section class="chef-section section">
     <div class="section-header">
       <span class="section-tag" data-en="Master of Culinary Arts" data-ar="فنان الطهي">Master of Culinary Arts</span>
-      <h2 class="section-title" data-en="Our Master Chef" data-ar="طاهينا">Our Master Chef</h2>
+      <h2 class="section-title" data-en="Our Master" data-ar="طاهينا">Our Master</h2>
+      <h2 class="section-title accent" data-en="Chef" data-ar="الشيف">Chef</h2>
     </div>
     <div class="chef-card" style="max-width:1000px;margin:0 auto;">
       <div class="chef-image">
@@ -106,7 +117,7 @@
           <div class="achievement"><i class="fas fa-award"></i><span data-en="Best Saudi Chef 2024" data-ar="أفضل شيف سعودي 2024">Best Saudi Chef 2024</span></div>
           <div class="achievement"><i class="fas fa-book"></i><span data-en="3 Published Cookbooks" data-ar="3 كتب طبخ منشورة">3 Published Cookbooks</span></div>
         </div>
-        <a href="pages/chef.html" class="btn-secondary" style="margin-top:20px;" data-en="Full Story" data-ar="القصة كاملة">Full Story</a>
+        <a href="pages/chef.html" class="btn-secondary" style="margin-top:20px;" data-en="Full Story →" data-ar="القصة كاملة ←">Full Story →</a>
       </div>
     </div>
   </section>
@@ -121,7 +132,7 @@
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-en=""An extraordinary culinary journey! The lamb kabsa was divine, and the ambiance transported us."" data-ar=""رحلة طهي استثنائية! كبسة اللحم كانت إلهية والأجواء نقلتنا لعالم آخر."">"An extraordinary culinary journey! The lamb kabsa was divine."</p>
+        <p data-en=""An extraordinary culinary journey! The lamb kabsa was divine, and the ambiance transported us."" data-ar=""رحلة طهي استثنائية! كبسة اللحم كانت إلهية والأجواء نقلتنا لعالم آخر."">"An extraordinary culinary journey — the lamb kabsa was divine!"</p>
         <div class="guest"><span>— Mohammed A.</span><span data-en="Riyadh" data-ar="الرياض">Riyadh</span></div>
       </div>
       <div class="testimonial-card reveal">
@@ -131,7 +142,7 @@
       </div>
       <div class="testimonial-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-en=""Best dining experience in Riyadh! Impeccable service, unforgettable flavors."" data-ar=""أفضل تجربة طعام في الرياض! خدمة لا تشوبها شائبة ونكهات لا تنسى."">"Best dining experience in Riyadh! Unforgettable."</p>
+        <p data-en=""Best dining experience in Riyadh! Impeccable service, unforgettable."" data-ar=""أفضل تجربة طعام في الرياض!"">"Best dining experience in Riyadh! Unforgettable."</p>
         <div class="guest"><span>— Abdullah F.</span><span data-en="Dammam" data-ar="الدمام">Dammam</span></div>
       </div>
     </div>
