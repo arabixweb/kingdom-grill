@@ -7,15 +7,37 @@
 // RENDER HEADER
 // ============================================================
 function renderHeader(currentPage = 'home') {
+  const baseUrls = {
+    home: 'index.html',
+    menu: 'menu.html',
+    chef: 'chef.html',
+    reservation: 'reservation.html',
+    contact: 'contact.html',
+  };
+
   const pages = [
-    { id: 'home', en: 'Home', ar: 'الرئيسية', href: '../index.html' },
-    { id: 'menu', en: 'Menu', ar: 'القائمة', href: 'menu.html' },
-    { id: 'chef', en: 'Chef', ar: 'الشيف', href: 'chef.html' },
-    { id: 'reservation', en: 'Reservation', ar: 'الحجز', href: 'reservation.html' },
-    { id: 'contact', en: 'Contact', ar: 'اتصل بنا', href: 'contact.html' },
+    { id: 'home', en: 'Home', ar: 'الرئيسية' },
+    { id: 'menu', en: 'Menu', ar: 'القائمة' },
+    { id: 'chef', en: 'Chef', ar: 'الشيف' },
+    { id: 'reservation', en: 'Reservation', ar: 'الحجز' },
+    { id: 'contact', en: 'Contact', ar: 'اتصل بنا' },
   ];
 
-  const rootPath = currentPage === 'home' ? '.' : '..';
+  // From root (index.html) → path needs pages/ prefix
+  // From sub-page (pages/*.html) → path is just the filename (same dir)
+  const prefix = currentPage === 'home' ? 'pages/' : '';
+
+  // Home page needs: pages/menu.html, pages/chef.html etc
+  // Sub-pages (already in pages/) need: menu.html, chef.html etc
+  const getPageUrl = (pageId) => {
+    if (currentPage === 'home') {
+      if (pageId === 'home') return 'index.html';
+      return `pages/${baseUrls[pageId]}`;
+    }
+    // Sub-pages: home goes up one level, others are same dir
+    if (pageId === 'home') return '../index.html';
+    return baseUrls[pageId];
+  };
 
   return `
     <div class="lang-toggle" id="langToggle">
@@ -25,7 +47,7 @@ function renderHeader(currentPage = 'home') {
 
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="${rootPath}/index.html" class="logo">
+        <a href="${currentPage === 'home' ? 'index.html' : '../index.html'}" class="logo">
           <span class="logo-icon">👑</span>
           <span class="logo-text" data-en="Kingdom Grill" data-ar="مشاوي المملكة">Kingdom Grill</span>
         </a>
@@ -34,7 +56,7 @@ function renderHeader(currentPage = 'home') {
         </div>
         <ul class="nav-menu" id="navMenu">
           ${pages.map(p => `
-            <li><a href="${rootPath}/${p.href}" class="${p.id === currentPage ? 'active' : ''}" 
+            <li><a href="${getPageUrl(p.id)}" class="${p.id === currentPage ? 'active' : ''}" 
                    data-en="${p.en}" data-ar="${p.ar}">${p.en}</a></li>
           `).join('')}
         </ul>
@@ -47,7 +69,10 @@ function renderHeader(currentPage = 'home') {
 // RENDER FOOTER
 // ============================================================
 function renderFooter(currentPage = 'home') {
-  const rootPath = currentPage === 'home' ? '.' : '..';
+  // For links in pages/: home needs 'pages/', sub-pages need '' (same dir)
+  const pageLinkPrefix = currentPage === 'home' ? 'pages/' : '';
+  // For assets, images: home needs './', sub-pages need '../' (go up one level)
+  const prefix = currentPage === 'home' ? './' : '../';
 
   return `
     <footer class="footer">
@@ -59,10 +84,10 @@ function renderFooter(currentPage = 'home') {
         <div class="footer-links">
           <div class="footer-col">
             <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-            <a href="${rootPath}/index.html" data-en="Home" data-ar="الرئيسية">Home</a>
-            <a href="${rootPath}/pages/menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
-            <a href="${rootPath}/pages/reservation.html" data-en="Reservation" data-ar="الحجز">Reservation</a>
-            <a href="${rootPath}/pages/contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+            <a href="${prefix}index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="${pageLinkPrefix}menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+            <a href="${pageLinkPrefix}reservation.html" data-en="Reservation" data-ar="الحجز">Reservation</a>
+            <a href="${pageLinkPrefix}contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
           </div>
           <div class="footer-col">
             <h4 data-en="Hours" data-ar="ساعات العمل">Hours</h4>
@@ -75,7 +100,7 @@ function renderFooter(currentPage = 'home') {
         <p>&copy; 2024 Kingdom Grill. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
         <div class="footer-developed">
           <a href="https://www.arabixweb.com" target="_blank" rel="noopener" class="arabix-credit">
-            <img src="${rootPath}/assets/arabix-logo.png" alt="Arabix" class="arabix-logo" />
+            <img src="${prefix}assets/arabix-logo.png" alt="Arabix" class="arabix-logo" />
             <span data-en="Developed by Arabix" data-ar="تطوير عربيكس">Developed by Arabix</span>
           </a>
         </div>
