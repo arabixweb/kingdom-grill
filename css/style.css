@@ -1095,11 +1095,8 @@ body[dir="rtl"] .footer-col a:hover { padding-left: 0; padding-right: 4px; }
 .menu-card-img { transition: var(--transition); }
 
 /* --- Hero Logo Animation --- */
-.hero-logo {
   animation: fadeInUp 0.8s ease;
 }
-.hero-logo img {
-  filter: drop-shadow(0 0 30px rgba(201,168,76,0.15));
 }
 
 /* --- Footer Logo --- */
