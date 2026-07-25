@@ -27,7 +27,7 @@ function renderHeader(currentPage = 'home') {
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="${currentPage === 'home' ? 'index.html' : '../index.html'}" class="logo">
-          <img src="${currentPage === 'home' ? 'assets/logo.svg' : '../assets/logo.svg'}" alt="Kingdom Grill" style="height:42px;">
+          <img src="${currentPage === 'home' ? 'assets/logo.svg' : '../assets/logo.svg'}" alt="Kingdom Grill" style="height:48px;">
         </a>
         <div class="lang-toggle" id="langToggle">
           <button class="lang-btn active" data-lang="en">English</button>
