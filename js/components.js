@@ -24,15 +24,15 @@ function renderHeader(currentPage = 'home') {
   };
 
   return `
-    <div class="lang-toggle" id="langToggle">
-      <button class="lang-btn active" data-lang="en">English</button>
-      <button class="lang-btn" data-lang="ar">العربية</button>
-    </div>
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="${currentPage === 'home' ? 'index.html' : '../index.html'}" class="logo">
           <img src="${currentPage === 'home' ? 'assets/logo.svg' : '../assets/logo.svg'}" alt="Kingdom Grill" style="height:42px;">
         </a>
+        <div class="lang-toggle" id="langToggle">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ar">العربية</button>
+        </div>
         <div class="nav-toggle" id="navToggle">
           <span></span><span></span><span></span>
         </div>

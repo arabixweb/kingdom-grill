@@ -59,17 +59,36 @@ body::before {
    LANGUAGE TOGGLE
    ===================================================== */
 .lang-toggle {
-  position: fixed;
-  top: 24px;
-  right: 24px;
-  z-index: 10000;
   display: flex;
   gap: 3px;
-  background: rgba(5,5,5,0.85);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(5,5,5,0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(201,168,76,0.12);
   border-radius: 100px;
   padding: 3px;
+  margin-left: auto;
+}
+
+/* On desktop: lang toggle inside navbar */
+@media (min-width: 769px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .lang-toggle {
+    position: static;
+  }
+}
+
+/* On mobile: fixed position below navbar */
+@media (max-width: 768px) {
+  .lang-toggle {
+    position: fixed;
+    top: 75px;
+    right: 15px;
+    z-index: 9999;
+  }
 }
 .lang-btn {
   padding: 7px 18px;
