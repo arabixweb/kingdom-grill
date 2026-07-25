@@ -1,58 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>القائمة | Menu — Kingdom Grill</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Pizza Kingdom 🇸🇦</title>
+  <meta name="description" content="Explore Pizza Kingdom's menu — Classic, Special, Saudi-style pizzas, and sides. Order online in Riyadh, Jeddah, Dammam & more." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
+<body data-page="menu">
+
   <div id="header-placeholder"></div>
 
   <section class="page-hero">
-    <div class="page-hero-particles"></div>
-    <div class="page-hero-content">
-      <span class="page-badge" data-en="✦ Our Offerings ✦" data-ar="✦ ما نقدمه ✦">✦ Our Offerings ✦</span>
-      <h1 class="page-title" data-en="Royal Signature" data-ar="الملكية">Royal Signature</h1>
-      <h1 class="page-title accent" data-en="Dishes" data-ar="الأطباق المميزة">Dishes</h1>
-    </div>
+    <h1 data-en="Our <span>Royal Menu</span>" data-ar="قائمتنا <span>الملكية</span>">Our <span>Royal Menu</span></h1>
+    <p data-en="Handcrafted pizzas for every taste — from classic favorites to Saudi originals." data-ar="بيتزا مصنوعة يدويًا لكل الأذواق — من الكلاسيكيات المفضلة إلى الإبداعات السعودية.">Handcrafted pizzas for every taste — from classic favorites to Saudi originals.</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> › Menu</div>
   </section>
 
-  <section class="section">
-    <div class="menu-categories">
-      <button class="menu-cat active" data-cat="all" data-en="All" data-ar="الكل">All</button>
-      <button class="menu-cat" data-cat="appetizers" data-en="Appetizers" data-ar="مقبلات">Appetizers</button>
-      <button class="menu-cat" data-cat="mains" data-en="Main Course" data-ar="الأطباق الرئيسية">Main Course</button>
-      <button class="menu-cat" data-cat="desserts" data-en="Desserts" data-ar="الحلويات">Desserts</button>
-      <button class="menu-cat" data-cat="beverages" data-en="Beverages" data-ar="المشروبات">Beverages</button>
+  <section class="menu-page section">
+    <div class="container">
+      <div class="menu__tabs">
+        <button class="menu__tab active" data-category="all" data-en="All" data-ar="الكل">All</button>
+        <button class="menu__tab" data-category="classic" data-en="Classic" data-ar="كلاسيك">Classic</button>
+        <button class="menu__tab" data-category="special" data-en="Special" data-ar="خاص">Special</button>
+        <button class="menu__tab" data-category="saudi" data-en="🇸🇦 Saudi" data-ar="🇸🇦 سعودي">🇸🇦 Saudi</button>
+        <button class="menu__tab" data-category="sides" data-en="Sides & Drinks" data-ar="إضافات ومشروبات">Sides & Drinks</button>
+      </div>
+      <div class="menu__grid" id="menuGrid"></div>
     </div>
-    <div class="menu-grid" id="menuGrid"></div>
   </section>
 
   <div id="footer-placeholder"></div>
 
-  <script src="../js/components.js?v=1784947353?v=1784943920?v=1784943514"></script>
-  <script src="../js/menu-data.js?v=1784947353?v=1784943920?v=1784943514"></script>
-  <script src="../js/main.js?v=1784947353?v=1784943920?v=1784943514"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initSharedComponents('menu');
-      renderMenuItems(menuData.appetizers.concat(menuData.mains).concat(menuData.desserts).concat(menuData.beverages));
-    });
-
-    document.querySelectorAll('.menu-cat').forEach(cat => {
-      cat.addEventListener('click', () => {
-        document.querySelectorAll('.menu-cat').forEach(c => c.classList.remove('active'));
-        cat.classList.add('active');
-        const catName = cat.dataset.cat;
-        if (catName === 'all') {
-          renderMenuItems(menuData.appetizers.concat(menuData.mains).concat(menuData.desserts).concat(menuData.beverages));
-        } else {
-          renderMenuItems(menuData[catName]);
-        }
-      });
-    });
-  </script>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

@@ -1,70 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا | Contact — Kingdom Grill</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Pizza Kingdom 🇸🇦</title>
+  <meta name="description" content="Get in touch with Pizza Kingdom — call, email, or visit any of our 12+ branches across Saudi Arabia." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
+<body data-page="contact">
+
   <div id="header-placeholder"></div>
 
   <section class="page-hero">
-    <div class="page-hero-particles"></div>
-    <div class="page-hero-content">
-      <span class="page-badge" data-en="✦ Get in Touch ✦" data-ar="✦ تواصل معنا ✦">✦ Get in Touch ✦</span>
-      <h1 class="page-title" data-en="We'd Love to" data-ar="يسعدنا">We'd Love to</h1>
-      <h1 class="page-title accent" data-en="Hear From You" data-ar="سماع منك">Hear From You</h1>
+    <h1 data-en="<span>Contact</span> Us" data-ar="<span>اتصل</span> بنا"><span>Contact</span> Us</h1>
+    <p data-en="We'd love to hear from you. Get in touch with Pizza Kingdom." data-ar="يسعدنا سماع رأيك. تواصل مع بيتزا كينغدوم.">We'd love to hear from you. Get in touch with Pizza Kingdom.</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> › Contact</div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="contact__info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4 data-en="Call Us" data-ar="اتصل بنا">Call Us</h4>
+              <p>+966 55 123 4567</p>
+              <p data-en="📞 24/7 Hotline" data-ar="📞 خط ساخن 24/7">📞 24/7 Hotline</p>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4 data-en="Email Us" data-ar="راسلنا بالبريد">Email Us</h4>
+              <p>info@pizzakingdom.sa</p>
+              <p>orders@pizzakingdom.sa</p>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4>
+              <p>+966 55 123 4567</p>
+              <p data-en="💬 Reply within 5 minutes" data-ar="💬 رد خلال 5 دقائق">💬 Reply within 5 minutes</p>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <h4 data-en="Working Hours" data-ar="ساعات العمل">Working Hours</h4>
+              <p data-en="Sun–Thu: 11:00 AM – 1:00 AM" data-ar="الأحد–الخميس: 11:00 ص – 1:00 ص">Sun–Thu: 11:00 AM – 1:00 AM</p>
+              <p data-en="Fri–Sat: 1:00 PM – 2:00 AM" data-ar="الجمعة–السبت: 1:00 م – 2:00 ص">Fri–Sat: 1:00 PM – 2:00 AM</p>
+            </div>
+          </div>
+          <a href="https://wa.me/966551234567" target="_blank" class="btn btn--whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> <span data-en="Chat on WhatsApp" data-ar="تواصل عبر واتساب">Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="contact__form-wrap">
+          <h3 data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h3>
+          <form class="contact__form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required data-en-placeholder="Your Name" data-ar-placeholder="اسمك" />
+            <input type="email" name="email" placeholder="your@email.com" required />
+            <input type="tel" name="phone" placeholder="Phone Number (optional)" data-en-placeholder="Phone Number (optional)" data-ar-placeholder="رقم الهاتف (اختياري)" />
+            <select name="subject" required>
+              <option value="" data-en="Select Subject" data-ar="اختر الموضوع">Select Subject</option>
+              <option value="order" data-en="Order Inquiry" data-ar="استفسار طلب">Order Inquiry</option>
+              <option value="complaint" data-en="Complaint" data-ar="شكوى">Complaint</option>
+              <option value="feedback" data-en="Feedback" data-ar="اقتراح">Feedback</option>
+              <option value="franchise" data-en="Franchise Inquiry" data-ar="استفسار امتياز تجاري">Franchise Inquiry</option>
+              <option value="other" data-en="Other" data-ar="أخرى">Other</option>
+            </select>
+            <textarea name="message" placeholder="Your Message" required data-en-placeholder="Your Message" data-ar-placeholder="رسالتك"></textarea>
+            <button type="submit" class="btn btn--primary" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="contact-grid">
-      <div class="contact-sidebar">
-        <div class="contact-item">
-          <i class="fas fa-map-pin"></i>
-          <div>
-            <h4 data-en="Address" data-ar="العنوان">Address</h4>
-            <p>King Fahd Road, Riyadh, Saudi Arabia</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
-            <p>+966 55 123 4567</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
-            <p>info@kingdomgrill.sa</p>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
+  <!-- FAQ -->
+  <section class="section" id="faq" style="padding-top:0;">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</span>
+        <h2 class="section__title" data-en="Frequently Asked <span>Questions</span>" data-ar="<span>أسئلة</span> شائعة">Frequently Asked <span>Questions</span></h2>
       </div>
-      <div class="map-box">
-        <i class="fas fa-map-marked-alt"></i>
-        <p data-en="King Fahd Road, Riyadh, Saudi Arabia" data-ar="طريق الملك فهد، الرياض، المملكة العربية السعودية">King Fahd Road, Riyadh, Saudi Arabia</p>
-        <span data-en="📍 Interactive Map" data-ar="📍 خريطة تفاعلية">📍 Interactive Map Coming Soon</span>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__question" data-en="What are your delivery hours?" data-ar="ما هي ساعات التوصيل؟">What are your delivery hours?</button>
+          <div class="faq__answer"><p data-en="We deliver from 11:00 AM to 1:00 AM Sunday through Thursday, and 1:00 PM to 2:00 AM on Friday and Saturday." data-ar="نقوم بالتوصيل من 11:00 صباحًا حتى 1:00 صباحًا من الأحد إلى الخميس، ومن 1:00 مساءً حتى 2:00 صباحًا يومي الجمعة والسبت.">We deliver from 11:00 AM to 1:00 AM Sunday through Thursday, and 1:00 PM to 2:00 AM on Friday and Saturday.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" data-en="How long does delivery take?" data-ar="كم من الوقت يستغرق التوصيل؟">How long does delivery take?</button>
+          <div class="faq__answer"><p data-en="We guarantee delivery within 30 minutes within our service areas. If it takes longer, your next pizza is on us!" data-ar="نضمن التوصيل في غضون 30 دقيقة داخل مناطق الخدمة لدينا. إذا استغرق وقتًا أطول، البيتزا التالية مجانًا!">We guarantee delivery within 30 minutes within our service areas. If it takes longer, your next pizza is on us!</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" data-en="Is all your food halal?" data-ar="هل جميع طعامكم حلال؟">Is all your food halal?</button>
+          <div class="faq__answer"><p data-en="Yes! Pizza Kingdom is 100% halal certified. All our meat is sourced from certified halal suppliers. We do not use any alcohol in our recipes." data-ar="نعم! بيتزا كينغدوم حلال معتمد 100%. جميع لحومنا من موردين حلال معتمدين. لا نستخدم أي كحول في وصفاتنا.">Yes! Pizza Kingdom is 100% halal certified. All our meat is sourced from certified halal suppliers. We do not use any alcohol in our recipes.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" data-en="Do you offer gluten-free options?" data-ar="هل تقدمون خيارات خالية من الغلوتين؟">Do you offer gluten-free options?</button>
+          <div class="faq__answer"><p data-en="Absolutely! We have gluten-free pizza bases available at all our locations. Just mention it when you order." data-ar="بالتأكيد! لدينا قواعد بيتزا خالية من الغلوتين متوفرة في جميع فروعنا. فقط اذكر ذلك عند الطلب.">Absolutely! We have gluten-free pizza bases available at all our locations. Just mention it when you order.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" data-en="Can I franchise Pizza Kingdom?" data-ar="هل يمكنني الحصول على امتياز تجاري لبيتزا كينغدوم؟">Can I franchise Pizza Kingdom?</button>
+          <div class="faq__answer"><p data-en="Yes! We're expanding across the Kingdom. Contact our franchise team at franchise@pizzakingdom.sa for details on requirements and investment." data-ar="نعم! نحن نتوسع في جميع أنحاء المملكة. اتصل بفريق الامتياز التجاري على franchise@pizzakingdom.sa للحصول على تفاصيل حول المتطلبات والاستثمار.">Yes! We're expanding across the Kingdom. Contact our franchise team at franchise@pizzakingdom.sa for details on requirements and investment.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
 
-  <script src="../js/components.js?v=1784947353?v=1784943920?v=1784943514"></script>
-  <script src="../js/main.js?v=1784947353?v=1784943920?v=1784943514"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => initSharedComponents('contact'));
-  </script>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

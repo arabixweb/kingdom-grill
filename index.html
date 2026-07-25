@@ -1,162 +1,181 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مشاوي المملكة | Kingdom Grill — Fine Arabian Dining</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Kingdom 🇸🇦 – Saudi's Best Pizza Restaurant</title>
+  <meta name="description" content="Saudi's finest pizza since 2020. Authentic Italian recipes with a Saudi touch. Order online for delivery across KSA." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
+<body data-page="home">
 
+  <!-- Header -->
   <div id="header-placeholder"></div>
 
-  <!-- HERO -->
-  <section class="hero" id="hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-    <div id="three-container" style="position:absolute;inset:0;z-index:1;"></div>
-    <div style="position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(5,5,5,0.9) 0%,rgba(5,5,5,0.2) 40%,rgba(5,5,5,0.85) 100%);"></div>
-    <div id="heroParticles" style="position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;"></div>
-    
-    <div class="hero-content" style="position:relative;z-index:4;text-align:center;max-width:920px;padding:0 30px;">
-      <div style="display:inline-block;padding:8px 28px;border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;background:rgba(201,168,76,0.04);backdrop-filter:blur(4px);border-radius:4px;animation:fadeInUp 1s ease;" data-en="✦ Since 2024 ✦" data-ar="✦ منذ 2024 ✦">✦ Since 2024 ✦</div>
-      
-      <h1 style="font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;color:var(--text);text-shadow:0 2px 40px rgba(0,0,0,0.5);animation:fadeInUp 1s ease 0.2s both;" data-en="A Taste of" data-ar="طعم">A Taste of</h1>
-      <h1 style="font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:25px;animation:fadeInUp 1s ease 0.3s both;" data-en="Royalty" data-ar="المملكة">Royalty</h1>
-      
-      <p style="font-size:clamp(0.95rem,1.3vw,1.1rem);color:var(--text-muted);line-height:1.9;max-width:580px;margin:0 auto 40px;animation:fadeInUp 1s ease 0.5s both;" data-en="Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance." data-ar="استمتع بأرقى المأكولات العربية في قلب المملكة العربية السعودية — حيث يلتقي التراث العريق بالأناقة العصرية.">Experience the finest Arabian cuisine in the heart of Saudi Arabia — where centuries-old tradition meets modern elegance.</p>
-      
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 1s ease 0.7s both;">
-        <a href="pages/menu.html" class="btn-primary" data-en="Explore Menu" data-ar="استعرض القائمة">Explore Menu</a>
-        <a href="pages/reservation.html" class="btn-secondary" data-en="Book a Table" data-ar="احجز طاولة">Book a Table</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__container">
+      <div class="hero__content">
+        <span class="hero__badge" data-en="🇸🇦 Saudi's Finest Pizza" data-ar="🇸🇦 أفضل بيتزا في السعودية">🇸🇦 Saudi's Finest Pizza</span>
+        <h1 class="hero__title" data-en="Taste the <span>Royal</span> Difference" data-ar="تذوق الفرق <span>الملكي</span>">Taste the <span>Royal</span> Difference</h1>
+        <p class="hero__desc" data-en="Fresh ingredients. Authentic recipes. Baked to perfection with a Saudi touch since 2020." data-ar="مكونات طازجة. وصفات أصلية. مخبوزة بإتقان مع لمسة سعودية منذ 2020.">Fresh ingredients. Authentic recipes. Baked to perfection with a Saudi touch since 2020.</p>
+        <div class="hero__actions">
+          <a href="pages/menu.html" class="btn btn--primary" data-en="Explore Menu" data-ar="تصفح القائمة">Explore Menu</a>
+          <a href="pages/contact.html" class="btn btn--outline" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num" data-count="5000">5K+</span>
+            <span class="stat__label" data-en="Happy Customers" data-ar="عملاء سعداء">Happy Customers</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="50">50+</span>
+            <span class="stat__label" data-en="Pizza Varieties" data-ar="نوع من البيتزا">Pizza Varieties</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="12">12+</span>
+            <span class="stat__label" data-en="Saudi Cities" data-ar="مدينة سعودية">Saudi Cities</span>
+          </div>
+        </div>
       </div>
-      
-      <div style="display:flex;gap:50px;justify-content:center;margin-top:55px;animation:fadeInUp 1s ease 0.9s both;">
-        <div style="text-align:center;"><span class="stat-num" data-count="50" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Dishes" data-ar="طبق">Dishes</span></div>
-        <div style="text-align:center;"><span class="stat-num" data-count="15" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Years Heritage" data-ar="عام">Years Heritage</span></div>
-        <div style="text-align:center;"><span class="stat-num" data-count="10000" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">0</span><span style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">+</span><span style="display:block;font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;" data-en="Happy Guests" data-ar="ضيف سعيد">Happy Guests</span></div>
+      <div class="hero__image">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=550&q=80" alt="Delicious Pizza Kingdom" class="hero__pizza-img" />
+        <div class="hero__floating-badge" data-en="🚀 Fast Delivery" data-ar="🚀 توصيل سريع">🚀 Fast Delivery</div>
+        <div class="hero__floating-badge hero__floating-badge--2" data-en="🌿 Fresh Ingredients" data-ar="🌿 مكونات طازجة">🌿 Fresh Ingredients</div>
       </div>
     </div>
-    
-    <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:4;text-align:center;animation:fadeInUp 1s ease 1.1s both;">
-      <span style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:3px;color:var(--text-muted);margin-bottom:8px;" data-en="Scroll Down" data-ar="اسحب للأسفل">Scroll Down</span>
-      <div style="width:22px;height:34px;border:2px solid var(--text-muted);border-radius:12px;margin:0 auto;position:relative;">
-        <div style="width:3px;height:7px;background:var(--gold);border-radius:2px;position:absolute;top:6px;left:50%;transform:translateX(-50%);animation:scrollDot 2s ease-in-out infinite;"></div>
-      </div>
-    </div>
-    <style>
-      @keyframes scrollDot { 0%,100% { transform:translateX(-50%) translateY(0); opacity:1; } 50% { transform:translateX(-50%) translateY(14px); opacity:0; } }
-    </style>
+    <div class="hero__wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#fefcf5" d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"/></svg></div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about section">
-    <div class="section-header">
-      <span class="section-tag" data-en="Our Story" data-ar="قصتنا">Our Story</span>
-      <h2 class="section-title" data-en="Where Tradition Meets" data-ar="حيث يلتقي التراث">Where Tradition Meets</h2>
-      <h2 class="section-title accent" data-en="Modern Elegance" data-ar="بالأناقة العصرية">Modern Elegance</h2>
-    </div>
-    <div class="about-content">
-      <div class="about-text">
-        <p data-en="Welcome to Kingdom Grill, where the rich tapestry of Saudi Arabian flavors is woven into every dish. Our chefs blend centuries-old recipes with contemporary techniques, creating an unforgettable dining experience that honors our heritage while embracing innovation.">Welcome to Kingdom Grill — where the rich tapestry of Saudi Arabian flavors is woven into every dish. Our chefs blend centuries-old recipes with contemporary techniques.</p>
-        <p data-en="Located in the heart of Riyadh, our restaurant offers a majestic ambiance with stunning views of the city skyline. Every detail, from the handcrafted decor to the exquisite presentation, reflects our commitment to excellence.">Located in the heart of Riyadh, every detail reflects our commitment to excellence — from the handcrafted decor to the exquisite presentation.</p>
-        <div class="about-signature">— Chef Ahmed Al-Saud</div>
-        <a href="pages/chef.html" class="btn-secondary" style="margin-top:20px;" data-en="Meet Our Chef" data-ar="تعرف على شيفنا">Meet Our Chef</a>
+  <!-- ===== ABOUT PREVIEW ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-en="About Us" data-ar="من نحن">About Us</span>
+        <h2 class="section__title" data-en="Where <span>Tradition</span> Meets Taste" data-ar="حيث يلتقي <span>التقليد</span> مع الطعم">Where <span>Tradition</span> Meets Taste</h2>
       </div>
-      <div class="about-gallery">
-        <div class="gallery-grid">
-          <div class="gallery-item" style="background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600') center/cover"></div>
-          <div class="gallery-item" style="background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600') center/cover"></div>
-          <div class="gallery-item" style="background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600') center/cover"></div>
-          <div class="gallery-item" style="background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600') center/cover"></div>
+      <div class="about__grid">
+        <div class="about__image">
+          <img src="https://images.unsplash.com/photo-1579751626657-72bc1701040c?w=600&q=80" alt="Pizza making" loading="lazy" />
+          <div class="about__exp">
+            <span class="about__exp-num">5+</span>
+            <span class="about__exp-label" data-en="Years of Excellence" data-ar="سنوات من التميز">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about__content">
+          <p data-en="At Pizza Kingdom, we bring the authentic taste of Italy with a rich Saudi touch. Every pizza is handcrafted using the finest imported ingredients, fresh local produce, and a passion that comes from years of experience." data-ar="في بيتزا كينغدوم، نقدم لكم الطعم الإيطالي الأصيل مع لمسة سعودية غنية. كل بيتزا تُصنع يدويًا باستخدام أفضل المكونات المستوردة، والمنتجات المحلية الطازجة، وشغف نابع من سنوات من الخبرة.">
+            At Pizza Kingdom, we bring the authentic taste of Italy with a rich Saudi touch. Every pizza is handcrafted using the finest imported ingredients, fresh local produce, and a passion that comes from years of experience.
+          </p>
+          <div class="about__features">
+            <div class="about__feature"><i class="fa-solid fa-wheat-awn"></i> <span data-en="100% Fresh Dough" data-ar="عجينة طازجة 100%">100% Fresh Dough</span></div>
+            <div class="about__feature"><i class="fa-solid fa-cheese"></i> <span data-en="Premium Mozzarella" data-ar="موزاريلا فاخرة">Premium Mozzarella</span></div>
+            <div class="about__feature"><i class="fa-solid fa-leaf"></i> <span data-en="Organic Toppings" data-ar="إضافات عضوية">Organic Toppings</span></div>
+            <div class="about__feature"><i class="fa-solid fa-hand-sparkles"></i> <span data-en="Halal Certified" data-ar="حلال معتمد">Halal Certified</span></div>
+          </div>
+          <a href="pages/about.html" class="btn btn--primary" data-en="Learn More" data-ar="المزيد">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MENU PREVIEW -->
-  <section class="section" id="homeMenuSection">
-    <div class="section-header">
-      <span class="section-tag" data-en="Our Offerings" data-ar="ما نقدمه">Our Offerings</span>
-      <h2 class="section-title" data-en="Royal" data-ar="الملكية">Royal</h2>
-      <h2 class="section-title accent" data-en="Signature Dishes" data-ar="الأطباق المميزة">Signature Dishes</h2>
-      <p class="section-subtitle" data-en="Crafted with passion, served with pride" data-ar="معد بشغف، يقدم بفخر">Crafted with passion, served with pride</p>
-    </div>
-    <div class="menu-grid menu-grid-home" id="homeMenuGrid"></div>
-    <div style="text-align:center;margin-top:50px;">
-      <a href="pages/menu.html" class="btn-primary" data-en="View Full Menu →" data-ar="عرض القائمة كاملة ←">View Full Menu →</a>
-    </div>
-  </section>
-
-  <!-- CHEF PREVIEW -->
-  <section class="chef-section section">
-    <div class="section-header">
-      <span class="section-tag" data-en="Master of Culinary Arts" data-ar="فنان الطهي">Master of Culinary Arts</span>
-      <h2 class="section-title" data-en="Our Master" data-ar="طاهينا">Our Master</h2>
-      <h2 class="section-title accent" data-en="Chef" data-ar="الشيف">Chef</h2>
-    </div>
-    <div class="chef-card" style="max-width:1000px;margin:0 auto;">
-      <div class="chef-image">
-        <div class="chef-frame">
-          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500" alt="Chef Ahmed Al-Saud">
-        </div>
-        <div class="chef-experience">
-          <span class="exp-number">25+</span>
-          <span data-en="Years" data-ar="عامًا">Years</span>
-        </div>
+  <!-- ===== WHY US ===== -->
+  <section class="why-us section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</span>
+        <h2 class="section__title" data-en="We're <span>Saudi's</span> Best for a Reason" data-ar="نحن الأفضل في <span>السعودية</span> لسبب">We're <span>Saudi's</span> Best for a Reason</h2>
       </div>
-      <div class="chef-info">
-        <div class="chef-tagline" data-en="✧ Saudi Arabia's Finest ✧" data-ar="✧ أفضل طهاة المملكة ✧">✧ Saudi Arabia's Finest ✧</div>
-        <h2 class="chef-name">Chef Ahmed Al-Saud</h2>
-        <p class="chef-desc" data-en="With over 25 years of culinary mastery, Chef Ahmed brings the authentic flavors of Saudi Arabia to life. Trained in Paris, inspired by home.">With over 25 years of culinary mastery, Chef Ahmed brings the authentic flavors of Saudi Arabia to life.</p>
-        <div class="chef-achievements">
-          <div class="achievement"><i class="fas fa-star"></i><span data-en="2 Michelin Stars" data-ar="نجمتا ميشلان">2 Michelin Stars</span></div>
-          <div class="achievement"><i class="fas fa-award"></i><span data-en="Best Saudi Chef 2024" data-ar="أفضل شيف سعودي 2024">Best Saudi Chef 2024</span></div>
-          <div class="achievement"><i class="fas fa-book"></i><span data-en="3 Published Cookbooks" data-ar="3 كتب طبخ منشورة">3 Published Cookbooks</span></div>
+      <div class="why-us__grid">
+        <div class="why-us__card">
+          <div class="why-us__icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="why-us__title" data-en="Lightning Delivery" data-ar="توصيل سريع جدًا">Lightning Delivery</h3>
+          <p class="why-us__text" data-en="30-minute delivery guarantee across all major Saudi cities. Hot and fresh, every time." data-ar="توصيل مضمون خلال 30 دقيقة في جميع المدن السعودية الرئيسية. ساخن وطازج دائمًا.">30-minute delivery guarantee across all major Saudi cities. Hot and fresh, every time.</p>
         </div>
-        <a href="pages/chef.html" class="btn-secondary" style="margin-top:20px;" data-en="Full Story →" data-ar="القصة كاملة ←">Full Story →</a>
+        <div class="why-us__card">
+          <div class="why-us__icon"><i class="fa-solid fa-medal"></i></div>
+          <h3 class="why-us__title" data-en="Premium Quality" data-ar="جودة ممتازة">Premium Quality</h3>
+          <p class="why-us__text" data-en="Imported Italian ingredients combined with the finest Saudi produce. Halal certified." data-ar="مكونات إيطالية مستوردة مع أفضل المنتجات السعودية. حلال معتمد.">Imported Italian ingredients combined with the finest Saudi produce. Halal certified.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <h3 class="why-us__title" data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</h3>
+          <p class="why-us__text" data-en="Order anytime, day or night. Our team is always ready to serve you with a smile." data-ar="اطلب في أي وقت، ليلاً أو نهارًا. فريقنا دائمًا جاهز لخدمتك بابتسامة.">Order anytime, day or night. Our team is always ready to serve you with a smile.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3 class="why-us__title" data-en="Family Deals" data-ar="عروض عائلية">Family Deals</h3>
+          <p class="why-us__text" data-en="Special combos designed for Saudi families. More pizza, less spending." data-ar="عروض خاصة مصممة للعائلات السعودية. بيتزا أكثر بسعر أقل.">Special combos designed for Saudi families. More pizza, less spending.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials section">
-    <div class="section-header">
-      <span class="section-tag" data-en="Guest Reviews" data-ar="آراء الضيوف">Guest Reviews</span>
-      <h2 class="section-title" data-en="What Our" data-ar="ماذا">What Our</h2>
-      <h2 class="section-title accent" data-en="Guests Say" data-ar="يقول ضيوفنا">Guests Say</h2>
+  <!-- ===== OFFER BANNER ===== -->
+  <section class="offer-section section">
+    <div class="container offer__container">
+      <div class="offer__content">
+        <span class="offer__badge" data-en="🔥 Limited Offer" data-ar="🔥 عرض محدود">🔥 Limited Offer</span>
+        <h2 class="offer__title" data-en="Buy 2 Large Pizzas<br>Get 1 <span>Free</span>" data-ar="اشتر 2 بيتزا كبيرة<br>واحصل على 1 <span>مجانًا</span>">Buy 2 Large Pizzas<br>Get 1 <span>Free</span></h2>
+        <p class="offer__text" data-en="Every Sunday to Wednesday. Dine-in, takeaway, or delivery. Use code: <strong>KINGDOM</strong>" data-ar="كل أحد إلى أربعاء. تناول في المطعم، أو الطلبات الخارجية، أو التوصيل. استخدم الكود: <strong>KINGDOM</strong>">Every Sunday to Wednesday. Dine-in, takeaway, or delivery. Use code: <strong>KINGDOM</strong></p>
+        <a href="pages/order.html" class="btn btn--primary" data-en="Order Now →" data-ar="اطلب الآن ←">Order Now →</a>
+      </div>
+      <div class="offer__image"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Pizza offer" loading="lazy" /></div>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <p data-en=""An extraordinary culinary journey! The lamb kabsa was divine, and the ambiance transported us."" data-ar=""رحلة طهي استثنائية! كبسة اللحم كانت إلهية والأجواء نقلتنا لعالم آخر."">"An extraordinary culinary journey — the lamb kabsa was divine!"</p>
-        <div class="guest"><span>— Mohammed A.</span><span data-en="Riyadh" data-ar="الرياض">Riyadh</span></div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</span>
+        <h2 class="section__title" data-en="What Our <span>Customers</span> Say" data-ar="ماذا يقول <span>عملاؤنا</span>">What Our <span>Customers</span> Say</h2>
       </div>
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <p data-en=""The perfect blend of tradition and modern luxury. Every dish is a masterpiece."" data-ar=""مزيج مثالي بين التراث والفخامة العصرية. كل طبق تحفة فنية."">"The perfect blend of tradition and modern luxury."</p>
-        <div class="guest"><span>— Sarah K.</span><span data-en="Jeddah" data-ar="جدة">Jeddah</span></div>
+      <div class="testimonials__slider" id="testimonialsSlider">
+        <div class="testimonial__card">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text" data-en="Best pizza in Jeddah! The Saudi Special with lamb kebab is incredible. My whole family loves it." data-ar="أفضل بيتزا في جدة! السعودي سبشيال مع كباب اللحم لا يُصدق. عائلتي كلها تحبه.">Best pizza in Jeddah! The Saudi Special with lamb kebab is incredible. My whole family loves it.</p>
+          <div class="testimonial__author"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Khalid" loading="lazy" /><div><h4>Khalid Al-Otaibi</h4><span data-en="Jeddah" data-ar="جدة">Jeddah</span></div></div>
+        </div>
+        <div class="testimonial__card">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text" data-en="Finally, a pizza place that gets it right. Fresh ingredients, fast delivery, fair prices. Five stars!" data-ar="أخيرًا، مطعم بيتزا يفهم الصح. مكونات طازجة، توصيل سريع، أسعار مناسبة. خمس نجوم!">Finally, a pizza place that gets it right. Fresh ingredients, fast delivery, fair prices. Five stars!</p>
+          <div class="testimonial__author"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Nora" loading="lazy" /><div><h4>Nora Al-Saud</h4><span data-en="Riyadh" data-ar="الرياض">Riyadh</span></div></div>
+        </div>
+        <div class="testimonial__card">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text" data-en="The Margherita tastes like Naples made it. And the Saudi touch with local spices? Genius." data-ar="طعم المارجريتا كأنها من نابولي. واللمسة السعودية بالبهارات المحلية؟ عبقرية.">The Margherita tastes like Naples made it. And the Saudi touch with local spices? Genius.</p>
+          <div class="testimonial__author"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ahmed" loading="lazy" /><div><h4>Ahmed Al-Qahtani</h4><span data-en="Dammam" data-ar="الدمام">Dammam</span></div></div>
+        </div>
       </div>
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <p data-en=""Best dining experience in Riyadh! Impeccable service, unforgettable."" data-ar=""أفضل تجربة طعام في الرياض!"">"Best dining experience in Riyadh! Unforgettable."</p>
-        <div class="guest"><span>— Abdullah F.</span><span data-en="Dammam" data-ar="الدمام">Dammam</span></div>
+      <div class="testimonials__dots" id="testimonialsDots"></div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section section">
+    <div class="container">
+      <div class="newsletter__box">
+        <div class="newsletter__content">
+          <span class="section__tag" data-en="Stay Connected" data-ar="ابق على اتصال">Stay Connected</span>
+          <h2 class="newsletter__title" data-en="Subscribe to <span>Our Newsletter</span>" data-ar="اشترك في <span>نشرتنا البريدية</span>">Subscribe to <span>Our Newsletter</span></h2>
+          <p data-en="Get exclusive deals, new menu updates, and a free drink on your first order!" data-ar="احصل على عروض حصرية، وتحديثات القائمة الجديدة، ومشروب مجاني مع أول طلب!">Get exclusive deals, new menu updates, and a free drink on your first order!</p>
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" placeholder="your@email.com" required id="newsletterEmail" />
+            <button type="submit" class="btn" data-en="Subscribe" data-ar="اشتراك">Subscribe</button>
+          </form>
+        </div>
+        <div class="newsletter__image"><img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&q=80" alt="Newsletter" loading="lazy" /></div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="js/three-hero.js?v=1784947353?v=1784943920?v=1784943514?v=1784943209"></script>
-  <script src="js/menu-data.js?v=1784947353?v=1784943920?v=1784943514?v=1784943209"></script>
-  <script src="js/main.js?v=1784947353?v=1784943920?v=1784943514?v=1784943209"></script>
-  <script src="js/components.js?v=1784947353?v=1784943920?v=1784943514?v=1784943209"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initSharedComponents('home');
-      if (typeof renderHomeMenu === 'function') renderHomeMenu();
-    });
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

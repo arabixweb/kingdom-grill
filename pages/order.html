@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Online — Pizza Kingdom 🇸🇦</title>
+  <meta name="description" content="Order pizza online from Pizza Kingdom. Fast delivery across Saudi Arabia. Choose from 50+ pizza varieties." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+</head>
+<body data-page="order">
+
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <h1 data-en="<span>Order</span> Online" data-ar="<span>اطلب</span> عبر الإنترنت"><span>Order</span> Online</h1>
+    <p data-en="Fresh pizza delivered to your door. Fast, hot, and made with love." data-ar="بيتزا طازجة تُوصَل إلى باب منزلك. سريعة، ساخنة، ومصنوعة بحب.">Fresh pizza delivered to your door. Fast, hot, and made with love.</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> › Order</div>
+  </section>
+
+  <section class="order-page section">
+    <div class="container">
+      <div class="order__type">
+        <button class="order__type-btn active" id="deliveryBtn" data-en="🚚 Delivery" data-ar="🚚 توصيل">🚚 Delivery</button>
+        <button class="order__type-btn" id="pickupBtn" data-en="🏪 Pickup" data-ar="🏪 استلام">🏪 Pickup</button>
+      </div>
+
+      <!-- Order Items -->
+      <div class="section__header" style="margin-bottom:30px;">
+        <span class="section__tag">1</span>
+        <h2 class="section__title" style="font-size:1.5rem;" data-en="Select Your <span>Items</span>" data-ar="اختر <span>الطلبات</span>">Select Your <span>Items</span></h2>
+      </div>
+
+      <div class="order__items" id="orderItems">
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=150&q=80" alt="Margherita" />
+          <div class="order__row-info">
+            <h4 data-en="Margherita Pizza" data-ar="بيتزا مارجريتا">Margherita Pizza</h4>
+            <span>29 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="29" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1566847438217-76e82d383f84?w=150&q=80" alt="Pepperoni" />
+          <div class="order__row-info">
+            <h4 data-en="Pepperoni Pizza" data-ar="بيتزا بيبروني">Pepperoni Pizza</h4>
+            <span>32 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="32" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=150&q=80" alt="Truffle" />
+          <div class="order__row-info">
+            <h4 data-en="Truffle Mushroom" data-ar="مشروم وترفيل">Truffle Mushroom</h4>
+            <span>45 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="45" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=150&q=80" alt="Saudi Special" />
+          <div class="order__row-info">
+            <h4 data-en="Saudi Special" data-ar="سعودي سبشيال">Saudi Special</h4>
+            <span>42 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="42" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?w=150&q=80" alt="BBQ Chicken" />
+          <div class="order__row-info">
+            <h4 data-en="BBQ Chicken" data-ar="دجاج باربكيو">BBQ Chicken</h4>
+            <span>39 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="39" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=150&q=80" alt="Garlic Bread" />
+          <div class="order__row-info">
+            <h4 data-en="Garlic Bread" data-ar="خبز بالثوم">Garlic Bread</h4>
+            <span>14 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="14" />
+        </div>
+        <div class="order__row">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=150&q=80" alt="Fries" />
+          <div class="order__row-info">
+            <h4 data-en="French Fries" data-ar="بطاطس مقلية">French Fries</h4>
+            <span>12 SAR</span>
+          </div>
+          <input type="number" class="order__qty" min="0" max="20" value="0" data-price="12" />
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="order__total-bar">
+        <span data-en="Total:" data-ar="المجموع:">Total:</span>
+        <strong id="orderTotal">0.00 <small>SAR</small></strong>
+      </div>
+
+      <!-- Order Form -->
+      <div class="section__header" style="margin-bottom:30px;">
+        <span class="section__tag">2</span>
+        <h2 class="section__title" style="font-size:1.5rem;" data-en="Your <span>Details</span>" data-ar="<span>بياناتك</span>">Your <span>Details</span></h2>
+      </div>
+
+      <form id="orderForm" class="order__form">
+        <div class="order__form-grid">
+          <input type="text" name="fullName" placeholder="Full Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="email" name="email" placeholder="Email (optional)" />
+          <select name="city" required>
+            <option value="">Select City</option>
+            <option value="riyadh">Riyadh</option>
+            <option value="jeddah">Jeddah</option>
+            <option value="dammam">Dammam</option>
+            <option value="makkah">Makkah</option>
+            <option value="madinah">Madinah</option>
+            <option value="tabuk">Tabuk</option>
+            <option value="other">Other</option>
+          </select>
+          <input type="text" name="address" placeholder="Delivery Address (if delivery)" class="full-width" />
+          <textarea name="notes" placeholder="Special Instructions / Coupon Code" class="full-width"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:15px; width:100%; justify-content:center;" data-en="Place Order ✅" data-ar="تأكيد الطلب ✅">Place Order ✅</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
